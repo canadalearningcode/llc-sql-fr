@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Ladies Learning Code</title>
+  <title>Journée nationale de l'apprentissage de la programmation</title>
   <link rel="stylesheet" href="framework/css/inspire.css" data-noprefix>
   <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
   <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
@@ -11,10 +11,10 @@
   <link rel="stylesheet" href="framework/css/a11y/plugin.css" data-noprefix>
   <link rel="shortcut icon" href="framework/img/favicon.ico">
 
-  <!-- Takes care of CSS3 prefixes -->
+  <!-- S'occupe des préfixes CSS3 -->
   <script src="framework/scripts/prefixfree.min.js"></script>
 
-  <!-- opens all links in a new window -->
+  <!-- Ouvre tous les liens dans une nouvelle fenêtre -->
   <base target="_blank">
 </head>
 
@@ -24,7 +24,7 @@
       <h1><img class="logo-stacked" src="framework/img/llc-logo-stacked-white.png" alt="Ladies Learning Code logo">Bienvenue!</h1>
 
       <div class="instructions">
-        <!-- ADD WIFI INFO HERE -->
+        <!-- AJOUTEZ LES INFOS SUR LE WI-FI ICI -->
         <h2>Téléchargez<br> & installez</h2>
         <ol class="downloads">
           <li>Fichiers d'apprentissage (fichier zip): <a href="https://github.com/ladieslearningcode/llc-sql-fr/archive/master.zip">http://bit.ly/clc-sql-fr</a>
@@ -47,17 +47,23 @@
     <article class="slide intro">
       <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
       <h1 class="heading-bg">
-        <span>Gestion de données avec SQL</span>
+        <span>#LLCCodeDay :<br> Gestion de données avec SQL</span>
       </h1>
-
+      <ul>
+        <li><a href="http://twitter.com/learningcode">@learningcode</a></li>
+        <li><a href="https://twitter.com/search?q=%23llcCodeDay&src=typd">#llcCodeDay</a></li>
+      </ul>
       <!-- FILL IN INSTRUCTOR DETAILS -->
-      <img class="instructor" src="http://placehold.it/225x225" alt="Instructor Name">
+      <!--<img class="instructor" src="http://placehold.it/225x225" alt="Instructor Name">
       <h2><span class="cursive">avec</span> Nom de l'instructeur</h2>
       <ul>
         <li><a href="mailto:">instructeur@email.com</a></li>
         <li><a href="http://website.com">site-web.com</a></li>
         <li><a href="http://twitter.com/">@twitter</a></li>
-      </ul>
+      </ul>-->
+      <div class="sponsor">
+        <p>En partenariat avec<br> <img src="framework/img/google-org-logo.svg" alt="Google.org"></p>
+      </div>
       <footer>
         <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.png" /></a>
         <p class="left">Contenu créé par <a href="https://ca.linkedin.com/in/matt-baum">Matthew Baum</a> pour <a prefix="cc: http://creativecommons.org/ns#" href="https://www.canadalearningcode.ca/fr/accueil/" property="cc:attributionName" rel="cc:attributionURL">Canada en programmation</a></p>
@@ -70,29 +76,29 @@
     <article class="slide" data-markdown>
       <script type="text/template">
         #Le projet
-        
+
         Les données sont omniprésentes dans nos vies et, comme nous verrons, SQL est un langage puissant permettant l'extraction d'informations utiles d'un grand volume de données.
-        
+
         Nous travaillerons avec des données réelles du gouvernement Canadien. Plus précisément, le [Fichier canadien sur les éléments nutritifs (FCÉN)](https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/saine-alimentation/donnees-nutritionnelles.html)!
-        
+
         Cette base de données contient des informations nutritionnelles pour plus de 5000 aliments, publiées par Santé Canada.
-        
+
         Nous débuterons par couvrir les bases du SQL et nous explorerons ensuite ces données par l'entremise d'exercices.
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #Que pouvez-vous faire avec SQL?
-        
+
         Le SQL est utilisé dans les BD servant plusieurs rôles d'affaires, incluant:
-        
+
         * Support à la clientèle
         * Marketing
         * Ventes
         * Finances
         * Avez-vous entendu parler de "Business intelligence" (BI)?
-        
+
         > Qu'en pensez-**vous**? Qu'est-ce qui vous a motivé à vous joindre à nous?
       </script>
     </article>
@@ -100,7 +106,7 @@
     <article class="slide" data-markdown>
       <script type="text/template">
         # Ce que nous allons couvrir
-        
+
         1. Que sont les données, les bases de données et SQL?
         1. Chercher du texte/des mots clés
         1. Trouver des données précises
@@ -110,43 +116,43 @@
         1. Joindre des données associées
       </script>
     </article>
-    
+
     <header class="slide title" data-toc>
       <h2>Premiers pas avec Zoom</h2>
     </header>
-    
+
     <article class="slide" data-markdown>
       <script type="text/template">
         # ZOOM – ACTIVER ET DÉSACTIVER LE MICRO
-        
-        ![zoom step 1](framework/img/workshop/zoom_1.png)
+
+        ![Pour activer ou désactiver le micro dans Zoom, cliquez sur le bouton de micro en bas à gauche de l’écran. S’il y a une barre rouge, le micro est désactivé et personne ne peut vous entendre. C’est la même chose pour la webcam.](framework/img/workshop/zoom_fr_1.png)
       </script>
     </article>
-    
+
     <article class="slide" data-markdown>
       <script type="text/template">
         # ZOOM - CLAVARDER
-        
-        ![zoom step 2](framework/img/workshop/zoom_2.png)
+
+        ![Vous pouvez accéder à la fonction de clavardage de Zoom en cliquant sur le bouton « Converser » en bas à droite de l’écran. Utilisez le clavardage si vous avez une question ou voulez partager quelque chose avec le groupe.](framework/img/workshop/zoom_fr_2.png)
       </script>
     </article>
-    
+
     <article class="slide" data-markdown>
       <script type="text/template">
         # ZOOM – LEVER LA MAIN
-        
-        ![zoom step 3](framework/img/workshop/zoom_3.png)
+
+        ![Pour lever la main virtuellement, cliquez sur le bouton « Participants ».](framework/img/workshop/zoom_fr_3.png)
       </script>
     </article>
-    
+
     <article class="slide" data-markdown>
       <script type="text/template">
         # ZOOM – LEVER LA MAIN (suite)
-        
-        ![zoom step 4](framework/img/workshop/zoom_4.png)
+
+        ![En bas de la fenêtre « Participants », vous verrez le bouton « Lever la main ». Essayez-le. Vous pouvez aussi répondre « oui » ou « non » en cliquant sur les boutons.](framework/img/workshop/zoom_fr_4.png)
       </script>
     </article>
-    
+
     <article class="slide" data-markdown>
       <script type="text/template">
         #Le code des programmeuses
@@ -167,19 +173,19 @@
       1. Ouvrir SQLite dans votre fureteur ([https://sqliteonline.com/](https://sqliteonline.com/))
       1. Appuyez sur le livre au bas et à droite de votre écran, afin de simplifier l'interface
       ![Open DB Link](framework/img/workshop/online_book.png)
-      
+
       1. Appuyez sur "File" et "Open DB"
       ![Open DB Link](framework/img/workshop/online_file.png)
-      
+
       1. Naviguez vers /data/cnf.db dans le répertoire du cours
       1. Appuyez sur "Ouvrir"
       </script>
     </article>
-    
+
     <article class="slide" data-markdown>
       <script type="text/template">
       Vous devriez obtenir une liste de tables à la gauche de votre écran:
-      
+
       ![SQLite Browser image](framework/img/workshop/online_open_browser.png)
       </script>
     </article>
@@ -188,7 +194,7 @@
       <script type="text/template">
         #Parfait!
         Notre environnement est prêt et nous pouvons retourner aux diapos.
-        
+
         Nous y reviendrons au DB Browser plus tard.
       </script>
     </article>
@@ -201,12 +207,12 @@
     <article class="slide" data-markdown>
       <script type="text/template">
         #Que sont les données?
-        
-        Les technologies de l'information et les données font partie intégrante de nos vies. 
+
+        Les technologies de l'information et les données font partie intégrante de nos vies.
         À présent, plus d'information est générée chaque année que dans toute l'histoire de l'humanité avant la création de l'internet.
-        
+
         Mais, **qu'est-ce qu'une donnée, exactement?**
-        
+
         Qu'en pensez-vous (partagez avec le groupe)?
       </script>
     </article>
@@ -221,7 +227,7 @@
         * Données digitales: peuvent être encodées et enregistrées sur des ordinateurs, ou communiquées entres eux
       </script>
     </article>
-    
+
     <article class="slide" data-markdown>
       <script type="text/template">
         # Utilisations des données
@@ -234,11 +240,11 @@
         * Diffusion vidéo: Lecture d'une séquence de données visuelles (des images)<!-- .element: class="delayed" -->
       </script>
     </article>
-    
+
     <article class="slide" data-markdown>
       <script type="text/template">
         # Manipulation de données
-        
+
         Les diverses manipulations de données possibles sont souvent décrites par l'acronyme anglais CRUD:
 
         * **C**reate: création
@@ -248,7 +254,7 @@
       </script>
     </article>
   </section>
-  
+
   <section>
     <header class="slide title" data-toc>
       <h1>Bases de données</h1>
@@ -259,7 +265,7 @@
         #Qu'est-ce qu'une base de données?
 
         Nous avons à présent une idée de ce qu'est une donnée, mais qu'est-ce qu'une base de données (BD)?
-        
+
         * Données structurées sur lesquelles on peut effectuer des requêtes (on peut poser des questions sur ces données)<!-- .element: class="delayed" -->
         * Données reliées entre elles (ex.: une personne et les détails de son emploi)<!-- .element: class="delayed" -->
 
@@ -273,7 +279,7 @@
       <script type="text/template">
         #Des données dans une table
         Voici un exemple de données sur des Personnes identifiées par leur NAS:
-        
+
         ![Database Table Diagram](framework/img/workshop/table_diagram.png)
       </script>
     </article>
@@ -281,7 +287,7 @@
     <article class="slide" data-markdown>
       <script type="text/template">
         #BD relationnelles
-        
+
         * Des données **semblables** sont enregistrées dans une **table**, qu'on appelle une **relation** (ex.: Personnes, Villes)
         * Les **colonnes** d'une table décrivent des **attributs** des données (ex.: nom et âge d'une Personne)
         * Les **lignes** d'une table représentent des **objets de donnée** (ex.: une Personne, avec tous ses attributs)
@@ -289,17 +295,17 @@
           * Ces clés uniques sont des **"clés primaires"**
       </script>
     </article>
-    
+
     <article class="slide" data-markdown>
       <script type="text/template">
         #Notre BD
-        
+
         Nous allons travailler avec **SQLite**, un gestionnaire de BD simple supportant le langage SQL.
-        
-        SQLite est gratuit et a peu de prérequis à l'installation. Il est couramment utilisé par les applications iOS et Android. 
-        
+
+        SQLite est gratuit et a peu de prérequis à l'installation. Il est couramment utilisé par les applications iOS et Android.
+
         C'est un bon outil d'apprentissage et tout ce que nous verrons est applicable aux autres BD relationnelles utilisant SQL.
-        
+
         Nous sommes maintenant prêts à apprendre le langage SQL!
       </script>
     </article>
@@ -309,141 +315,141 @@
     <header class="slide title" data-toc>
       <h1>SQL</h1>
     </header>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Qui utilise SQL?
-        
+
         SQL est **le langage le plus commun** pour effectuer des requêtes vers une BD et des **millions d'entreprises et de produits**  l'utilisent pour gérer leurs donées.
-        
+
         Voici quelques companies qui l'utilisent:
-        
+
         * Facebook
         * Youtube
         * Netflix
         * Uber
         * Twitter
-        
+
         Source: <a href="https://www.mysql.com/customers/industry/?id=">Clients MySQL</a>
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Eh, oui! SQL est partout!
-        
+
         ![SQL users gif](https://media.giphy.com/media/atZII8NmbPGw0/giphy.gif)
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Introduction au SQL
-        
+
         Maintenant que nous avons une idée de ce qu'est une BD, nous allons manipuler nos données!
-        
+
         **S**tructured **Q**uery **L**anguage (**SQL**) permet de définir, modifier et lire des données (CRUD).
-        
+
         Nous allons nous concentrer sur l'aspect d'SQL qui permet de poser des questions sur nos données (des requêtes).
-        
+
         Voyons à quoi ça ressemble!
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Anatomie d'une requête SQL
-        
+
         Une "question" pour une BD, formée de **clauses** (comme les phrases d'un paragraphe).
-        
+
         Les clauses SQL incluent des **mots clés** avec des noms de **colonnes** et de **tables** pour localiser les données voulues.
-        
+
         1. `SELECT` débute la 1re clause, suivi des colonnes voulues.
         2. `FROM` débute la 2e clause, suivi des noms des tables contenant les données.
         3. `;` termine la requête
-        
+
         > NOTE : SQL n'est **pas sensible à la casse**.
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Exemple d'une requête SELECT
-        
+
         Cette requête de base ressemble à:
-        
+
         ```sql
         SELECT FoodDescriptionF
         FROM FOOD_NAME;
         ```
-        
+
         Ceci retourne la valeur de la colonne `FoodDescriptionF` pour **chaque ligne** de `FOOD_NAME`.
-        
+
         > Et si on voulait toutes les colonnes de la table? Doit-on connaitre le nom de chaque colonne?
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Métacaractères SQL
-        
+
         Les **métacaractères** sont des caractères spéciaux qui peuvent remplacer n'importe quel autre caractère (lettre, nombre, symbole, etc.) dans une requête.
-        
+
         C'est semblable au "joker" dans certains jeux de cartes, ou cette carte peut prendre la valeur de n'importe quelle autre.
-        
+
         Le premier métacaractère que nous verrons aujourd'hui est:
-        
+
         * `*`, qui est typiquement utilisé pour couvrir toutes les colonnes disponibles dans une clause `SELECT`
-        
+
         > D'autres métacaractères plus précis existent et sont documentés [ici](https://www.w3schools.com/sql/sql_wildcards.asp).
-        
+
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Exercice 1
-        
+
         1. Écrivez la requête suivante et appuyez sur ![Run Button](framework/img/workshop/online_run.png)
-        
+
         ```sql
         SELECT *
         FROM FOOD_NAME;
         ```
-        
+
         Vous devriez obtenir un résultat comme celui-ci sous votre requête:
         ![Solution 1](framework/img/workshop/online_grp_ex_1.png)<!-- .element: class="delayed" -->
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # La clause "WHERE"
-              
+
         Et si nous voulions seulement retourner certaines entrées de nos données?
-        
+
         La clause `WHERE` **peut** suivre la clause `FROM`, et permet de filtrer ainsi:
-        
+
         ```sql
         SELECT *
         FROM FOOD_NAME
         WHERE colonne opérateur valeur;
         ```
-        
+
         Où:
-        
+
         1. **colonne** est l'attribut sur lequel on veut filtrer
         2. **opérateur** est le type de validation à faire (ex.: `=`, `<`, `>`, `<=`, `>=`)
         3. **valeur** est la valeur à valider (ex.: un **chiffre**)
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Exercice 2a
-              
+
         Modifions la requête précédente en lui ajoutant une clause `WHERE`:
-        
+
         Utilisez la condition `FoodID = 5` afin de sélectionner seulement l'aliment avec l'ID `5` :
         ```sql
         SELECT *
@@ -451,48 +457,48 @@
         WHERE FoodID = 5;
         ```
         <!-- .element: class="delayed" -->
-        
+
         <div>
         Le résultat ressemblera à ceci:
         ![Solution 2a](framework/img/workshop/online_ex2a_solution.png)
         </div><!-- .element: class="delayed" -->
-        
+
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Exercice 2b
-              
+
         Conçevez une requête pour sélectionner tous les ID **jusqu'à (et incluant)** `10`:
-        
+
         ```sql
         SELECT *
         FROM FOOD_NAME
         WHERE FoodID <= 10;
         ```
         <!-- .element: class="delayed" -->
-        
+
         <div>
         Le résultat ressemblera à ceci:
-        
+
         ![Solution 2b](framework/img/workshop/online_ex2b_solution.png)
         </div><!-- .element: class="delayed" -->
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Filtrer le texte avec "LIKE"
-              
+
         Nous venons de filtrer des résultats en comparant des valeurs numériques, mais pouvons-nous chercher du texte?
-        
+
         `LIKE` existe pour cette raison:
-        
+
         ```sql
         WHERE ma_colonne LIKE "votre texte ici"
         ```
-        
+
         1. Utilisez `"` autour du texte
         2. Utilisez `%` pour correspondre à n'importe quels caractères (métacaractère)
             * `"pomme%"` valide tous les textes **commençant** par `"pomme"`
@@ -501,59 +507,59 @@
             * `"pomme"` ne valide que ce texte **exact**
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Exercice 3
-        
+
         Prenez quelques minutes pour:
-              
+
         1. Choisir quelques **termes** à rechercher dans la table `FOOD_NAME`
         2. Expérimenter la sélection de diverses chaînes de caractères (texte)
         3. Expérimenter l'utilisation des métacaractères
-        
+
         ```sql
         SELECT *
         FROM FOOD_NAME
         WHERE FoodDescriptionF LIKE "%pomme%";
         ```
         <!-- .element: class="delayed" -->
-        
+
         ![Solution 3](framework/img/workshop/online_ex3_solution.png)<!-- .element: class="delayed" -->
-        
+
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Classer des données
-        
+
         On peut classer des résultats en utilisant la clause `ORDER BY`, suite au clauses `FROM` et `WHERE`:
-        
+
         ```sql
         SELECT *
         FROM ma_table
         ORDER BY ma_column (ASC ou DESC)
         ```
-        
+
         Où:
-        
+
         * **ma_colonne** est la colonne sur laquelle classer
         * **(ASC ou DESC)**: `ASC` pour classer en ordre ascendant, ou `DESC` pour classer en ordre descendant
-          
+
         Essayons-le!
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Exercice 4
-        
+
         Réutilisons notre dernière requête avec `LIKE` et modifions-la pour:
-              
+
         1. Classer les données sur `FoodID`, du plus grand au plus petit
         2. Classer les résultats en ordre ascendant sur `FoodDescriptionF`
-        
+
         ```sql
         SELECT FoodID, FoodGroupID, FoodSourceID, FoodDescriptionF
         FROM FOOD_NAME
@@ -561,42 +567,42 @@
         ORDER BY FoodID DESC;
         ```
         <!-- .element: class="delayed" -->
-        
+
         ![Solution 4](framework/img/workshop/online_ex4_solution.png)<!-- .element: class="delayed" -->
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Regrouper des résultats
-        
+
         La clause `GROUP BY` combine des lignes de données et calcule des valeurs sommaires pour chaque group formé.
-        
+
         ```sql
         GROUP BY ma_colonne
         ```
-        
+
         Combine des données avec des valeurs identiques dans la colonne `ma_colonne`, les mettant toutes dans "le meme panier", selon la valeur de la colonne choisie.
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
-        Pour illustrer, le groupement suivant sur la table Professeurs 
+        Pour illustrer, le groupement suivant sur la table Professeurs
         place les résultats dans deux paniers, mais quelle valeur doit prendre Salaire dans chaque cas?
-        
+
         ![GROUP BY Diagram](framework/img/workshop/group_by_diagram.png)
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Fonctions SQL
-        
+
         Imaginez qu'on regroupe des lignes de données semblables dans des boites communes.
-        
+
         Que pourrions-nous vouloir savoir à propos des contenus de nos boites?
-        
+
         <ul>
           <li>Le **nombre** d'éléments dans la boite: `COUNT(*)`</li><!-- .element: class="delayed" -->
           <li>La **valeur moyenne** d'une colonne: `AVG(colonne)`</li><!-- .element: class="delayed" -->
@@ -606,60 +612,60 @@
         </ul>
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Retour à GROUP BY
-        
+
         Comment pouvons-nous déterminer combiens d'aliments sont dans chaque groupe alimentaire?
-        
+
         ```sql
         SELECT FoodGroupID, COUNT(FoodID) AS "Aliments dans le groupe"
         FROM FOOD_NAME
         GROUP BY FoodGroupID;
         ```
-        
+
         Les colonnes qui apparaissent **à l'extérieur** de fonctions dans la clause `SELECT` apparaissent normalement dans la clause `GROUP BY`.
-        
+
         Les autres colonnes sont des calculs sur toutes les lignes du groupe.
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Joindre des tables
-        
+
         Nous voulons manipuler des données reliées provenant de tables **différentes** en **correspondant des ID**.
-        
+
         SQL nous fournit des façons différentes de faire ceci. Nous allons nous concentrer sur on `INNER JOIN` (ou simplement `JOIN`) :
-        
+
         ```sql
         SELECT colonnes
         FROM table1 JOIN table2 ON table1.colonne = table2.colonne;
         ```
-        
+
         > Pour d'autre jointures, cherchez `OUTER JOIN` (`LEFT`, `RIGHT` ou `FULL`) et `NATURAL JOIN` en ligne. Des tables peuvent aussi être combinées dans la clause `WHERE`.
       </script>
     </article>
-    
+
     <article class="slide" data-markdown>
       <script type="text/template">
         #Diagramme relationnel
 
         Des lignes dans deux tables distinctes peuvent être reliées en correspondant leur ID:
-        
+
         ![Relational diagram](framework/img/workshop/relationship.png)
         ![Relational diagram tables](framework/img/workshop/rd_tables.png)
-        
+
       </script>
     </article>
-    
+
     <article class="slide" data-markdown>
       <script type="text/template">
         #Liens
 
         Deux lignes dans des tables différentes peuvent être associées en utilisant la clé primaire (CP), établissant un **lien** entre elles. Par ex.:
-        
+
         <ol>
           <li>Une ligne dans la table `PERSONNE` décrit `Marie`. Sa CP est son NAS: `123456789`</li><!-- .element: class="delayed" -->
           <li>Une ligne dans la table `VILLE` décrit `Montréal`. Sa CP est le code: `YUL`</li><!-- .element: class="delayed" -->
@@ -669,62 +675,62 @@
         </ol>
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Visualiser JOIN
-        
+
         Ce diagramme de Venn illustre l'opération `INNER JOIN`, qui retourne **seulement** les lignes qui ont des **valeurs identiques** pour la colonne choisie dans **les deux tables**:
-        
+
         ![INNER JOIN Venn Diagram](framework/img/workshop/venn_inner_join.png)
-        
+
         > Des diagrammes pour les autres types de jointures sont disponibles [ici](https://www.w3schools.com/sql/sql_join.asp).
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Exercice 5: Préparation
-        
+
         Dans le paneau de gauche de SQLite Browser, éclatezles tables suivantes pour afficher leurs colonnes:
-        
+
         1. `FOOD_NAME`
         1. `NUTRIENT_AMOUNT`
 
         ![Table Columns](framework/img/workshop/online_tbl_cols.png)
-        
+
         > Quelle colonne ont en commun ces tables, permettant de les joindre ensemble?
-        
+
         Réponse: `FoodID`<!-- .element: class="delayed" -->
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Exercice 5: L'énoncé JOIN
-        
+
         Joignons les tables `FOOD_NAME` et `NUTRIENT_AMOUNT` afin d'obtenir les informations nutritionnelles pour l'aliment avec l'ID `20` (fromage brie):
-        
+
         ```sql
-        SELECT NutrientID, NutrientValue 
+        SELECT NutrientID, NutrientValue
         FROM FOOD_NAME
              JOIN NUTRIENT_AMOUNT ON FOOD_NAME.FoodID = NUTRIENT_AMOUNT.FoodID
         WHERE FOOD_NAME.FoodID = 20;
         ```
         <!-- .element: class="delayed" -->
-        
+
         ![Solution 5](framework/img/workshop/online_ex5_solution.png)<!-- .element: class="delayed" -->
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Joindre plus de deux tables
-        
+
         Il est possible de joindre plus de deux tables dans la même requête.
-        
+
         Pratiquons-nous en combinant 3 tables afin d'ajouter les noms des aliments a notre requête précédente:
-        
+
         ```sql
         SELECT NutrientNameF, NutrientValue
         FROM FOOD_NAME
@@ -734,13 +740,13 @@
         ```
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Les alias de table
-        
+
         Une requête avec plusieurs noms de tables répétés peut être simplifié de la façon suivante:
-        
+
         ```sql
         SELECT NutrientName, NutrientValue
         FROM FOOD_NAME fn
@@ -748,59 +754,59 @@
              JOIN NUTRIENT_NAME nn ON na.NutrientID = nn.NutrientID
         WHERE fn.FoodID = 20;
         ```
-        
+
         > Remarquez l'inclusions **d'alias** (**fn**, **na** et **nn**) pour réduire le texte. On choisit les noms comme on veut
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Exercice 6 (optionnel)
-        
+
         Pratiquons la jointure de tables d'avantage:
-        
+
         1. Observez les tables `FOOD_NAME`, `REFUSE_AMOUNT` et `REFUSE_NAME`
         1. Sur quels champs ces tables peuvent-elles être combinées?
         1. Select un aliment qui vous plait
         1. Écrivez une requête pour imprimer les quantités de chaque type de déchet ("refuse") produit par une portion de votre aliment
         1. Chaque ligne du résultat doit inclure: le **nom de l'aliment**, le **type de déchet**, la **quantité du déchet**
-        
+
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Exercice 6: Solutions
-        
+
         Votre requête devrait ressembler à:
-        
+
         ```sql
-        SELECT FoodDescriptionF, RefuseDescriptionF, RefuseAmount 
+        SELECT FoodDescriptionF, RefuseDescriptionF, RefuseAmount
         FROM FOOD_NAME fn
              JOIN REFUSE_AMOUNT ra ON fn.FoodID = ra.FoodID
              JOIN REFUSE_NAME rn ON ra.RefuseID = rn.RefuseID
         WHERE fn.FoodID = 600;
         ```
         <!-- .element: class="delayed" -->
-        
+
         <div>
         Le résultat devrait ressembler à:
-        
+
         ![Solution 6](framework/img/workshop/ex6_solution.png)
         </div><!-- .element: class="delayed" -->
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Les maths SQL
-        
+
         Finalement, apprenons comment effectuer des calculs mathématiques sur nos colonnes avant de retourner un résultat!
-        
+
         Ceci est utile pour modifier des colonnes numériques pour un rapport précis.
-        
+
         Les opérateurs mathématiques communs sont:
-        
+
         * Addition: `+`
         * Soustraction: `-`
         * Multiplication: `*`
@@ -808,15 +814,15 @@
         * Modulo: `%` (valeur restante après une division par un nombre entier)
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         # Exemple de maths
-        
+
         La BD CNF liste les nutriments pour une portion de 100g. Et si on voulait les quantités nutritionnelles par gramme?
-        
+
         Nous pouvons obtenir les nutriment/gramme pour du fromage brie de la façon suivante:
-        
+
         ```sql
         SELECT NutrientNameF, (NutrientValue/100) AS "Nutriment par gramme"
         FROM FOOD_NAME fn
@@ -825,14 +831,14 @@
         WHERE fn.FoodID = 20;
         ```
         <!-- .element: class="delayed" -->
-        
+
         <div>
         > Nous effectuons ici un calcul sur une valeur fixe, mais nous pouvons aussi effectuer des maths sur des colonnes.
         </div><!-- .element: class="delayed" -->
       </script>
     </article>
   </section>
-  
+
   <section>
     <header class="slide title" data-toc>
       <h1>Défis</h1>
@@ -843,65 +849,65 @@
         #Introduction
 
         Le monde de l'alimentation n'est pas toujours évident!
-        
+
         En tant qu'expertes dans le domaine, vous vous fiez aux données pour faire des recommandations aux étranges personnages visitant vos bureaux.
-        
+
         Tentez de résoudre chacun des problèmes suivants avec **une seule requête** afin de tester vos connaissances en SQL.
-        
+
         Amusez-vous!
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #Défi 1: Groupes critiques
 
         Mlle. Flan Boyante, la critique culinaire la plus populaire de la France visite le Canada!
-        
+
         Elle a entendu parler de nos curieux "groupes alimentaires" et sa demande est simple.
-        
+
         Elle requiert:
-        
+
         * Une liste complète des groupes alimentaires, avec
         * Le nombre total d'aliments dans chaque groupe
         * Les groupes doivent être triés du plus grand (plus d'aliments) au plus petit
-        
+
         > Trouvez-lui cette information avant qu'elle s'en prenne aux médias sociaux pour vous laisser un mauvais commentaire!
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #Défi 1: Solution
 
         ```sql
         SELECT FoodGroupNameF, COUNT(*) AS NombreAliments
-        FROM FOOD_NAME fn JOIN FOOD_GROUP fg 
+        FROM FOOD_NAME fn JOIN FOOD_GROUP fg
             ON fn.FoodGroupID = fg.FoodGroupID
         GROUP BY fg.FoodGroupID
         ORDER BY NombreAliments DESC;
         ```
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #Défi 2: D'la verdure!
 
         Brock O. Li adopte une nouvelle diète faible en glucides.
-        
+
         Il recherche des aliments rencontrant les critères suivants:
-        
+
         * Doit être un **légume**
         * Doit être **vert**
         * Doit contenir **moins de 10 grammes de glucides** par portion de 100 grammes
-        
+
         Votre client veut un simple tableau listant ces aliments avec leurs noms et les grammes de glucides contenus dans chaque portion, du plus petit au plus grand.
-        
+
         > **Indice**: Quel est le groupe alimentaire des légumes? Quel est l'ID des glucides? Quelles 2 tables doit-on joindre?
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #Défi 2: Solution
@@ -909,110 +915,110 @@
         ```sql
         SELECT FoodDescriptionF, NutrientValue AS "Grammes de glucides"
         FROM FOOD_NAME fn JOIN NUTRIENT_AMOUNT na ON fn.FoodID = na.FoodID
-        WHERE FoodGroupID = 11 
-            AND FoodDescriptionF LIKE "%vert%" 
+        WHERE FoodGroupID = 11
+            AND FoodDescriptionF LIKE "%vert%"
             AND NutrientID = 205
             AND NutrientValue < 10
         ORDER BY NutrientValue ASC;
         ```
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #Défi 3: Plan zigzag
 
         Amélie A. Archambault a toujours détesté la lettre "z".
-        
+
         Cet état phobique très rare la laisse à présent dans un état physique précaire: elle a une déficience en zinc!
-        
+
         Une femme de son âge requiert `8mg` de zinc quotidiennement.
-        
+
         Son médecin recommande le traitement suivant:
-        
+
         * Consommer des aliments contenant **au moins la moitié** la dose quotidienne de zinc dans chaque portion de 100g
         * Consommer des aliments contenant la lettre "z" dans leurs descriptions, pour se désensibiliser à la phobie
-        
+
         > Exécute une requête rapidement pour lui trouver des aliments acceptables!
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #Défi 3: Solution
 
         ```sql
         SELECT FoodDescriptionF, NutrientValue
-        FROM FOOD_NAME fn JOIN NUTRIENT_AMOUNT na 
+        FROM FOOD_NAME fn JOIN NUTRIENT_AMOUNT na
             ON fn.FoodID = na.FoodID
-        WHERE NutrientID = 309 
-            AND NutrientValue >= 4 
+        WHERE NutrientID = 309
+            AND NutrientValue >= 4
             AND FoodDescriptionF LIKE '%z%';
         ```
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #Défi 4: Pas de gaspillage!
 
         Votre enseignant de maths du secondaire entre dans votre bureau!
-        
+
         Il a joint un organisme environnementaliste et est convaincu d'avoir découvert un complot!
-        
+
         Il a besoin d'aliments ou l'`ID` est **divise parfaitement** par son `RefuseAmount` (quantité de déchet).
-        
+
         Vous tentez de lui expliquer que ceci ne fait aucun sens, mais il insiste!
-        
+
         > **Note** : Un nombre est parfaitement divise par un autre si le reste après la division est zéro (le `%` des deux nombres est `0`)
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #Défi 4: Solution
 
         ```sql
         SELECT fn.FoodID, FoodDescriptionF, RefuseAmount
-        FROM FOOD_NAME fn JOIN REFUSE_AMOUNT ra 
+        FROM FOOD_NAME fn JOIN REFUSE_AMOUNT ra
             ON fn.FoodID = ra.FoodID
-        WHERE RefuseID = 750 
+        WHERE RefuseID = 750
             AND (fn.FoodID % RefuseAmount = 0);
         ```
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #Défi 4b: Déchets = profits
 
         Votre ancien prof est extasié!
-        
+
         Il t'offre `$0.50` pour **chaque unité de dechet** dans ta liste, plutôt que le 200$ que tu charges typiquement.
-        
+
         Tu n'es pas certaine s'il tente de t'arnaquer ou s'il a bel et bien perdu la tête.
-        
+
         > Ajuste ta requête précédente pour calculer ta paie et vérifier!
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #Défi 4b: Solution
 
         ```sql
         SELECT (SUM(RefuseAmount) * 0.50) AS Paie
-        FROM FOOD_NAME fn JOIN REFUSE_AMOUNT ra 
+        FROM FOOD_NAME fn JOIN REFUSE_AMOUNT ra
             ON fn.FoodID = ra.FoodID
-        WHERE RefuseID = 750 
+        WHERE RefuseID = 750
             AND (fn.FoodID % RefuseAmount = 0);
         ```
-        
+
         > (Espérons qu'il n'est pas contagieux...)
       </script>
     </article>
   </section>
-  
+
   <section>
     <header class="slide title" data-toc>
       <h1>Conclusion</h1>
@@ -1033,50 +1039,53 @@
         1. Analyse de données existantes
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #VOS RÉTROACTIONS NOUS AIDENT À NOUS AMÉLIORER!
 
         Apprenants: donnez-nous votre avis ici:
-        
+
         [https://bit.ly/CLCLLCSondage](https://bit.ly/CLCLLCSondage)
-        
+
         Mentors: donnez-nous votre avis ici:
-        
+
         [https://bit.ly/CLCMentorSondage](https://bit.ly/CLCMentorSondage)
       </script>
     </article>
-    
+
     <article class="slide small-type" data-markdown>
       <script type="text/template">
         #Prochaines étapes
-        
+
         Ces ressources sont en anglais, mais certaines peuvent être traduites:
 
         * Revoir vos connaissances à l'aide <a href="https://www.w3schools.com/sql/sql_exercises.asp">d'exercises</a> et d'un <a href="https://www.w3schools.com/sql/sql_quiz.asp">quiz</a>
-        * Aprendre à <a href="https://www.w3schools.com/sql/sql_create_table.asp">créer des tables</a>, 
+        * Aprendre à <a href="https://www.w3schools.com/sql/sql_create_table.asp">créer des tables</a>,
         <a href="https://www.w3schools.com/sql/sql_update.asp">modifier des lignes</a> ou <a href="https://www.w3schools.com/sql/sql_delete.asp">en supprimer</a>
         * Utilisez SQL pour jouer à un jeu et <a href="https://mystery.knightlab.com/">résoudre un meurtre mystérieux (en anglais)!</a>
         * Tentez d'autres défis avec <a href="https://sqlzoo.net/">SQL Zoo</a>
-        
+
         > Et bien sûr, **lancez vos propres projets** et **utilisez vos connaissances au travail**!
       </script>
     </article>
 
-    <!-- Last slide -->
+    <!-- Dernière diapositive -->
     <article class="slide last">
       <h1>Merci!</h1>
       <h2 class="heading-bg">
-        <span>Gestion de données avec SQL</span>
+        <span>Journée nationale de l'apprentissage<br> de la programmation :<br> Gestion de données avec SQL</span>
       </h2>
-
-      <img class="instructor" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
+      <ul>
+        <li><a href="http://twitter.com/learningcode">@learningcode</a></li>
+        <li><a href="https://twitter.com/search?q=%23llcCodeDay&src=typd">#llcCodeDay</a></li>
+      </ul>
+      <!--<img class="instructor" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
       <h2><span class="cursive">avec</span> Nom de l'instructeur</h2>
       <ul>
         <li><a href="mailto:">bonjour@courriel.com</a></li>
         <li><a href="#">monsite.com</a></li>
-      </ul>
+      </ul>-->
 
       <p class="attribution">Diapos créées par <a href="http://christinatruong.com">Christina Truong</a> selon le modèle de <a href="https://github.com/LeaVerou/csss">Lea Verou</a> et <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
     </article>
@@ -1085,7 +1094,7 @@
   <script src="framework/scripts/jquery-3.4.1.slim.min.js"></script>
   <script src="framework/scripts/inspire.js"></script>
 
-  <!-- Uncomment the plugins you need -->
+  <!-- Enlevez les commentaires des modules dont vous avez besoin -->
   <script src="framework/scripts/plugins/css-edit.js"></script>
   <script src="framework/scripts/plugins/css-snippets.js"></script>
   <script src="framework/scripts/plugins/css-controls.js"></script>
