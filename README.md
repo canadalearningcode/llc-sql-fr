@@ -1,6 +1,6 @@
 # Canada en programmation
 
-# Journée nationale de l'apprentissage de la programmation
+# Femmes en programmation
 ## Gestion de données avec SQL
 
 Cet atelier couvre les bases des requêtes et de l'analyse de données avec la [Structured Query Language (SQL)](https://fr.wikipedia.org/wiki/Structured_Query_Language).
