@@ -7,7 +7,7 @@ Cet atelier couvre les bases des requêtes et de l'analyse de données avec la [
 
 ## Liens rapides
 
-[Notes de la formatrice](https://docs.google.com/document/d/15DzSmrUhSoOgIyCbVnSsQEOwIaa06lhkNS71HUd5cjk/edit?usp=sharing)
+[Notes de la formatrice](https://docs.google.com/document/d/1T6zX6DsouqMwggbz5lUfBM-QKO3xqBiIdrh50nSlIbY/edit?usp=sharing)
 
 [Diapositives](https://ladieslearningcode.github.io/llc-sql-fr/slides_abridged.html)
 
