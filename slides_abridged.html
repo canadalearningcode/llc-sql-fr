@@ -244,6 +244,24 @@
 
     <article class="slide" data-markdown>
       <script type="text/template">
+        # Décoloniser les données
+
+        Il est important de faire une analyse critique des données en vérifiant la source : d’où proviennent les données? Qui contrôle les données?
+
+        Les données que nous utilisons aujourd’hui ne sont pas exemptes de biais et de mentalité colonialiste. La politique de la nutrition a été façonnée par des expériences menées sur des enfants autochtones. Des scientifiques ont vu la malnutrition extrême dans les pensionnats autochtones comme une occasion de mettre à l’épreuve ses théories scientifiques.
+
+        Selon Abigail Echo-Hawk (du Seattle Indian Health Board), pour décoloniser les données, il faut que la communauté elle-même choisisse les informations qu’elle souhaite que nous collections.
+
+        Abigail nous invite aussi à nous interroger sur les raisons pour lesquelles les données sont collectées, sur l’entité qui les interprète et si cette entité le fait d’une manière qui sert réellement la communauté.
+        <br><br>
+
+        > <strong>Références</strong><br><ul><li><a href="https://crosscut.com/2019/05/abigail-echo-hawk-art-and-science-decolonizing-data">Abigail Echo-Hawk sur l’art et la science de la décolonisation des données (Crosscut)</a></li><li><a href="https://www.cbc.ca/radio/unreserved/how-food-in-canada-is-tied-to-land-language-community-and-colonization-1.5989764/the-dark-history-of-canada-s-food-guide-how-experiments-on-indigenous-children-shaped-nutrition-policy-1.5989785"><em>The dark history of Canada's Food Guide: How experiments on Indigenous children shaped nutrition policy</em> (CBC)</a></li><li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3941673/"><em>Canada's shameful history of nutrition research on residential school children: The need for strong medical ethics in Aboriginal health research.</em></a></li></ul>
+
+      </script>
+    </article>
+
+    <article class="slide" data-markdown>
+      <script type="text/template">
         # Manipulation de données
 
         Les diverses manipulations de données possibles sont souvent exprimées par l'acronyme anglais « CRUD » :
@@ -695,14 +713,14 @@
 
         Dans le panneau de gauche de SQLite Online, ouvrez les tables suivantes pour afficher leurs colonnes :
 
-        1. `FOOD_NAME`
+        1. `NUTRIENT_NAME`
         1. `NUTRIENT_AMOUNT`
 
-        ![Colonnes des tables](framework/img/workshop/online_tbl_cols.png)
+        ![Colonnes des tables](framework/img/workshop/online_tbl_cols_update.png)
 
         > Quelle est la colonne commune à ces tables qui nous permet de les joindre?
 
-        Réponse : `FoodID`<!-- .element: class="delayed" -->
+        Réponse : `NutrientID`<!-- .element: class="delayed" -->
       </script>
     </article>
 
@@ -710,17 +728,17 @@
       <script type="text/template">
         # Exercice 5 : l'énoncé JOIN
 
-        Joignons les tables `FOOD_NAME` et `NUTRIENT_AMOUNT` afin d'obtenir les informations nutritionnelles pour l'aliment avec l'ID `20` (fromage brie) :
+        Joignons les tables `NUTRIENT_NAME` et `NUTRIENT_AMOUNT` afin d'obtenir les informations nutritionnelles pour l'aliment avec l'ID `20` (fromage brie) :
 
         ```sql
-        SELECT NutrientID, NutrientValue
-        FROM FOOD_NAME
-             JOIN NUTRIENT_AMOUNT ON FOOD_NAME.FoodID = NUTRIENT_AMOUNT.FoodID
-        WHERE FOOD_NAME.FoodID = 20;
+        SELECT NutrientNameF, NutrientValue
+        FROM NUTRIENT_NAME
+          JOIN NUTRIENT_AMOUNT ON NUTRIENT_NAME.NutrientID = NUTRIENT_AMOUNT.NutrientID
+        WHERE NUTRIENT_AMOUNT.FoodID = 20;
         ```
         <!-- .element: class="delayed" -->
 
-        ![Solution 5](framework/img/workshop/online_ex5_solution.png)<!-- .element: class="delayed" -->
+        ![Solution 5](framework/img/workshop/online_ex5_solution_update.png)<!-- .element: class="delayed" -->
       </script>
     </article>
 
@@ -733,10 +751,10 @@
         Exerçons-nous en combinant 3 tables afin d'ajouter les noms des aliments à notre requête précédente :
 
         ```sql
-        SELECT NutrientNameF, NutrientValue
-        FROM FOOD_NAME
-             JOIN NUTRIENT_AMOUNT ON FOOD_NAME.FoodID = NUTRIENT_AMOUNT.FoodID
-             JOIN NUTRIENT_NAME ON NUTRIENT_AMOUNT.NutrientID = NUTRIENT_NAME.NutrientID
+        SELECT NutrientNameF, NutrientValue, FoodDescriptionF
+        FROM NUTRIENT_NAME
+          JOIN NUTRIENT_AMOUNT ON NUTRIENT_NAME.NutrientID = NUTRIENT_AMOUNT.NutrientID
+          JOIN FOOD_NAME ON FOOD_NAME.FoodID = NUTRIENT_AMOUNT.FoodID
         WHERE FOOD_NAME.FoodID = 20;
         ```
       </script>
@@ -749,10 +767,10 @@
         Une requête avec plusieurs noms de tables répétés peut être simplifiée de la façon suivante :
 
         ```sql
-        SELECT NutrientName, NutrientValue
-        FROM FOOD_NAME fn
-             JOIN NUTRIENT_AMOUNT na ON fn.FoodID = na.FoodID
-             JOIN NUTRIENT_NAME nn ON na.NutrientID = nn.NutrientID
+        SELECT NutrientNameF, NutrientValue, FoodDescriptionF
+        FROM NUTRIENT_NAME nn
+          JOIN NUTRIENT_AMOUNT na ON nn.NutrientID = na.NutrientID
+          JOIN FOOD_NAME fn ON fn.FoodID = na.FoodID
         WHERE fn.FoodID = 20;
         ```
 
